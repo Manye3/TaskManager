@@ -1,0 +1,21 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependencies
+node_modules/
+
+# Build
+dist/
+dist-ssr/
+
+# Env
+.env.local
+.env.*.local
+
+# Editor
+*.swp
+*.swo
+.vscode/
+.idea/
