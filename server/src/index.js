@@ -31,6 +31,11 @@ app.use((err, req, res, next) => {
 
 // boot up
 getDb(); // init db on startup
-app.listen(PORT, () => {
-  console.log(`TaskFlow server running on port ${PORT}`);
-});
+
+if (process.env.VERCEL !== '1') {
+  app.listen(PORT, () => {
+    console.log(`TaskFlow server running on port ${PORT}`);
+  });
+}
+
+module.exports = app;
